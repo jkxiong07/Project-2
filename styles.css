@@ -1,0 +1,78 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #0f117c;
+    --secondary-color: #f9f9f9;
+    --tertiary-color: #fff700;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 35px;
+    padding: 0px 15px 0px 15px; 
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.logo svg{
+    width: 20px;
+    fill: var(--secondary-color);
+}
+
+.hero {
+    display: flex;
+    background-image: url('/images/hero-image.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    justify-content: center;
+}
+
+.hero-header {
+    display: flex;
+    font-size: 56px;
+    font-weight: bold;
+    height: 100%;
+    color: var(--secondary-color);
+    align-items: center;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.img-source-hero {
+    font-style: italic;
+    position: relative;
+    align-self: flex-end;
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+
+.footer {
+    height: 35px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: var(--secondary-color);
+    font-size: 14px;
+}
