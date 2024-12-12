@@ -237,7 +237,10 @@ body {
     }
     .featured-movie-container {
         grid-template-columns: 75px 325px;
-        grid-template-rows: 250px;
+        grid-template-rows: 100px;
+    }
+    .featured-movie-img img {
+        height: 250px;
     }
     .movie-section {
         grid-template-columns: auto 400px auto;
