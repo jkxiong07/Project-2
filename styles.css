@@ -11,6 +11,14 @@
     --tertiary-color: #fff700;
 }
 
+.spacer {
+    height: 50px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -48,7 +56,7 @@
 
 .hero-header {
     display: flex;
-    font-size: 56px;
+    font-size: 50px;
     font-weight: bold;
     height: 100%;
     color: var(--secondary-color);
@@ -58,7 +66,8 @@
 
 .img-source-hero {
     font-style: italic;
-    position: relative;
+    opacity: 0.5;
+    position: absolute;
     align-self: flex-end;
     color: var(--secondary-color);
     font-size: 12px;
@@ -74,5 +83,134 @@
 
 .footer p {
     color: var(--secondary-color);
+    font-size: 10px;
+}
+
+.featured-movie {
+    display: grid;
+    grid-template-columns: auto 750px auto;
+    grid-template-rows: 150px;
+}
+
+.featured-movie-container {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: 150px 600px;
+    height: 150px;
+    justify-items: center;
+    align-items: center;
+    border: rgba(0, 0, 110, 0.25) 1px solid;
+    border-radius: 15px;
+}
+
+.featured-movie-img {
+    display: flex;
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.featured-movie-img img {
+    object-fit: fill;
+    height: 100%; 
+    animation: imageTransition 10s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.featured-movie-info h2 {
+    font-size: 24px;
+    grid-column: 2 / 3;
+    padding: 10px;
+    animation: textTransition 10s ease-in-out infinite;
+    animation-delay: 0.3s;
+    animation-play-state: running;
+}
+
+.featured-movie-info p {
     font-size: 14px;
+    grid-column: 2 / 3;
+    padding: 10px;
+    animation: textTransition 10s ease-in-out infinite;
+    animation-delay: 0.3s;
+    animation-play-state: running;
+}
+
+@keyframes imageTransition {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes textTransition {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.movie-section {
+    display: grid;
+    grid-template-columns: auto 750px auto;
+}
+
+.movie-section-container {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.movie-section-item {
+    display: grid;
+    grid-template-rows: 150px auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.movie-section-img {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.movie-section-img img {
+    object-fit: fill;
+    height: 100%;
+}
+
+.movie-section-desc {
+    font-size: 12px;
+    padding: 10px;
 }
